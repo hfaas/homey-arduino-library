@@ -562,6 +562,8 @@ void HomeyClass::handleRequest() {
 		String type = _request.endpoint.substring(0,position);
 		String name = _request.endpoint.substring(position+1);
 
+		name.replace("%20", " ");
+
 		DEBUG_PRINT("searching '");
 		DEBUG_PRINT(name);
 		DEBUG_PRINT("' of type '");
